@@ -10,13 +10,13 @@ const fetchDatos = (URL: string) => async () => {
     console.log(error);
   }
 };
-const URL = 'https://apideltron.up.railway.app/productos/';
+const URL = 'https://apideltron.up.railway.app';
 
-export const useFetch = (pro: string) => {
-  const { data = [] } = useQuery<Producto[]>({
-    queryKey: [pro],
-    queryFn: fetchDatos(`${URL}${pro}`),
+export const useFetch = (producto: string) => {
+  const { data: productos = [] } = useQuery<Producto[]>({
+    queryKey: [producto],
+    queryFn: fetchDatos(`${URL}/productos/${producto}`),
   });
 
-  return { data };
+  return { productos };
 };

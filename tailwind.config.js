@@ -2,7 +2,9 @@
 export default {
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
-    extend: {},
+    extend: {
+      colors: { whatsapp: '#25d366' },
+    },
   },
   plugins: [],
 };
