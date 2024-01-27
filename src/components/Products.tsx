@@ -35,9 +35,7 @@ export const Products = ({ type }: { type: string }) => {
                   <h2 className='font-bold line-clamp-2 text-lg opacity-90 w-[70%] text-balance'>
                     {titulo}
                   </h2>
-                  <p className='text-red-600 font-bold text-xl'>
-                    {lasPlatas(precio)}
-                  </p>
+                  <p className='text-red-600 font-bold text-xl'>{precio}</p>
                 </div>
                 <div className='flex justify-center'>
                   <button

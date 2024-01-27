@@ -23,6 +23,7 @@ export const store = create<carritoStore>()(
           return { cartToggle: !prev.cartToggle };
         });
       },
+
       agregarProducto: (newProducto) => {
         const productos = get().productos;
         const existe = productos.findIndex(
